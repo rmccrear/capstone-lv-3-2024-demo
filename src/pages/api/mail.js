@@ -3,7 +3,7 @@ import { Resend } from 'resend';
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const resend = new Resend(RESEND_API_KEY);
 
-export default function handler(req, res){
+export default async function handler(req, res){
   const query = req.query;
   const user = query.user;
   const message = req.query.message;
@@ -15,7 +15,11 @@ export default function handler(req, res){
     subject: `Hello from ${user}`,
     html: `${user} says: <br><strong>${message}</strong>`,
   }
-  resend.emails.send(email1)
+  const {data, error} = await resend.emails.send(email1)
+  if(error){
+    console.log(data);
+    console.log(error);
+  }
   res.status(200).json({
     emailStatus: "sending",
     message: message,
