@@ -19,7 +19,7 @@ export default function MagicLinkAuthPage() {
       window.localStorage.setItem("email", email);
       window.localStorage.setItem("magicKey", magicKey);
     }
-  }, [isMagicKeyValid, email]);
+  }, [isMagicKeyValid, email, magicKey]);
 
   async function sendMagicLinkAuth(emailAddress, magicKeyString) {
     const result = await fetch(`/api/magic-link-auth?magic-key=${magicKeyString}&email=${emailAddress}`);
