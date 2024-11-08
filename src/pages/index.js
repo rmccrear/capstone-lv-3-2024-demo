@@ -10,6 +10,16 @@ export default function Home() {
         <li>
           <Link href="contact-me">Contact Me</Link>
         </li>
+        <li>
+          <Link href="fruit-chooser">
+            Set Fruit
+          </Link>
+        </li>
+        <li>
+          <Link href="fruit-checker">
+            Get Fruit
+          </Link>
+        </li>
       </ul>
     </div>
   );
