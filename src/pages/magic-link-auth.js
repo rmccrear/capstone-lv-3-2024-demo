@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
 export default function MagicLinkAuthPage() {
   const [email, setEmail] = useState("");
@@ -31,9 +31,13 @@ export default function MagicLinkAuthPage() {
   const successfulMessage = (
     <div>
       <p>
-        <span className="text-green-600">Success!</span> 
+        <span className="text-green-600">Success!</span>
+      </p>
+      <p>
         You are now logged in.
+      </p>
 
+      <p>
         Visit our cat-approved fruit page: <Link href="/fruit-chooser" className="text-blue-500">Fruit Chooser</Link>
       </p>
     </div>
