@@ -42,7 +42,7 @@ export default async function handler(req, res) {
     console.log(error);
     res.status(401).json({
       emailStatus: "error sending mail",
-      message: error,
+      message: error.message || "Error sending mail",
 
     });
   } else {

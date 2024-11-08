@@ -31,7 +31,7 @@ export default function MagicLinkAuthPage() {
   const successfulMessage = (
     <div>
       <p>
-        <span className="text-green-600">Success!</span>! 
+        <span className="text-green-600">Success!</span> 
         You are now logged in.
 
         Visit our cat-approved fruit page: <Link href="/fruit-chooser" className="text-blue-500">Fruit Chooser</Link>

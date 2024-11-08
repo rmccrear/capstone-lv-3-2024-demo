@@ -20,6 +20,11 @@ export default function Home() {
             Get Fruit
           </Link>
         </li>
+        <li>
+          <Link href="magic-link-signin">
+            Sign In with Email
+          </Link>
+        </li>
       </ul>
     </div>
   );
