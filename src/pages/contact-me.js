@@ -4,6 +4,7 @@ export default function MailPage() {
   // Step 2: create a state variable and setter
   // using the useState Hook.
   const [user, setUser] = useState("");
+  const [message, setMessage] = useState("Hi!!!!!!");
 
   // to send mail, create a fetch request to our
   // api we created at /api/mail
@@ -18,10 +19,16 @@ export default function MailPage() {
   }
 
   // Step 4: add handler
-  function changeHandler(event) {
+  function userChangeHandler(event) {
     const input = event.target.value;
     console.log("changed! " + input);
     setUser(input);
+  }
+
+  function messageChangeHandler(event) {
+    console.log(event);
+    const messageInput = event.target.value;
+    setMessage(messageInput);
   }
 
   return (
@@ -33,8 +40,15 @@ export default function MailPage() {
         <input className="px-4 py-3 bg-gray-100 w-2/3 text-sm outline-none border-b-2 border-blue-500 rounded" 
           type="text"
           value={user}
-          onChange={changeHandler}
+          onChange={userChangeHandler}
         />
+        {/* step 1: create an input */}
+        <textarea className="border-2 border-blue-500 m-2"
+          value={message}
+          onChange={messageChangeHandler}
+        >
+        </textarea>
+
         <button className="border-2"
           type="button"
           onClick={handleClick}
