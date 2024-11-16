@@ -33,8 +33,8 @@ export default function CatHouseLoginPage(){
          value={email}
          id="email-label"
          type="email"
-         className="border-2 border-black" />
-      <button onClick={handleSignIn} className="border-2 border-black" type="button">Get Access</button>
+         className="input input-bordered w-full max-w-xs" />
+      <button onClick={handleSignIn} className="btn btn-primary" type="button">Get Access</button>
     </form>
   </div>);
 

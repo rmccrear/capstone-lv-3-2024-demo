@@ -26,6 +26,7 @@ export default function Home() {
           </Link>
         </li>
       </ul>
+      <button className="btn btn-secondary">Hello</button>
     </div>
   );
 }

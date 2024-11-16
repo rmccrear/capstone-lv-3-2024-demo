@@ -13,5 +13,9 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  daisyui: {
+    themes: ["bumblebee", "coffee", "autumn"],
+  },
+  darkMode: ["selector", '[data-theme="coffee"]'],
+  plugins: [require("daisyui")],
 };

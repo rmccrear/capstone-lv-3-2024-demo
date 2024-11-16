@@ -19,6 +19,6 @@ export default function CatHousePage() {
     <p className="text-red-600">{cat.error}</p>
     <p className="border-2 border-red-300">cat name: {cat.name}</p>
     <p className="border-2 border-red-300">{cat.description}</p>
-    <button className="border-2 border-black" onClick={handleClick}>Get Cat</button>
+    <button className="btn btn-primary" onClick={handleClick}>Get Cat</button>
   </div>);
 }
