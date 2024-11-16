@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 
 export default function CatHouseLoginPage(){
@@ -23,11 +24,11 @@ export default function CatHouseLoginPage(){
 
   return (<div>
     <p>
-      Type your email here for access to cat house.
+      Type your email here for access to cat house. <Link className="btn btn-link" href="cathouse">Go to Cathouse (requires signin)</Link>
     </p>
     <form>
       {/* step 2: sync state and input value */}
-      <label for="email-label">Email</label>
+      <label htmlFor="email-label">Email</label>
       <input 
          onChange={handleEmailChange}
          value={email}
