@@ -11,7 +11,7 @@ export default function handler(req, res) {
   // const storedPasskey = redis.get(`passkey:${email}`)
   const storedPasskey = "h4ckeR10000";
 
-  tif (
+  if (
     email === storedEmail
     && passkey === storedPasskey
   ) {
@@ -27,6 +27,4 @@ export default function handler(req, res) {
       error: "incorrect login"
     });
   }
-
-
 }
